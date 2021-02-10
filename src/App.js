@@ -7,6 +7,9 @@ import news1 from "./img/news-1.jpg";
 import news2 from "./img/news-2.jpg";
 
 function App() {
+  const phone = '+38 (050) 972 54 39';
+  const email = 'ufs1ufs@gmail.com';
+  const btn = 'Бесплатная консультация'
   return (
     <>
     <header id="header" className="header">
@@ -14,13 +17,13 @@ function App() {
         <div className="container">
           <div className="header__contacts">
             <a className="header__phone" href="tel:380509725439">
-              +38 (050) 972 54 39
+              {phone}
             </a>
             <a className="header__email" href="mailto:ufs1ufs@gmail.com">
-              ufs1ufs@gmail.com
+              {email}
             </a>
             <a data-src="#modal" href="#modal" className="header__btn">
-              Бесплатная консультация
+              {btn}
             </a>
           </div>
         </div>
