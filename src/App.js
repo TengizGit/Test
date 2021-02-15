@@ -41,6 +41,10 @@ function App() {
   const formTextPhone = 'Контактный телефон';
   const formTextName = 'ФИО';
   const formTopicQuestion = 'Тема вопроса';
+  const formTopicQuestionOne = 'вопрос №1';
+  const formTopicQuestionTwo = 'вопрос №2';
+  const formTopicQuestionTree = 'вопрос №3';
+  const formTopicQuestionFour = 'вопрос №4';
   const formMessage = 'Сообщение';
   const formgetConsultation = 'Получить консультацию';
   const advantagesTitleFirst = 'Десятки добровольных ликвидаций ежемесячно';
@@ -263,10 +267,10 @@ function App() {
                       <label>
                         {formTopicQuestion}
                         <select>
-                          <option>-------------</option>
-                          <option>-------------</option>
-                          <option>-------------</option>
-                          <option>-------------</option>
+                          <option>{formTopicQuestionOne}</option>
+                          <option>{formTopicQuestionTwo}</option>
+                          <option>{formTopicQuestionTree}</option>
+                          <option>{formTopicQuestionFour}</option>
                         </select>
                       </label>
                     </div>
