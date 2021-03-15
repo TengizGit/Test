@@ -31,3 +31,16 @@
     background-color: #eee;
     color: coral;
   }
+
+  .Table h3 {
+    margin: 15px;
+  }
+
+  .Table p {
+    margin: 10px;
+  }
+
+  .Table h2 {
+    margin: 15px;
+    
+  }
