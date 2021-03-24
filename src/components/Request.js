@@ -5,11 +5,19 @@ const firstTitle = '6 урок'
 const firstParagraph = 'Задание: получить информацию из любого стороннего апи и отобразить на странице в виде списка или таблицы'
 
 class Request extends React.Component {
-  state = {
-    error: null,
-    isLoaded: false,
-    items: []
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isloaded: false,
+      items: []
+    };
   }
+  //state = {
+  //  error: null,
+  //  isLoaded: false,
+  //  items: []
+  //}
 
   componentDidMount() {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail")
@@ -47,7 +55,7 @@ class Request extends React.Component {
             {items.map(item => (
               <li key={item.name}>
                 {item.strDrink}
-                <img width='30' height='30' src={item.strDrinkThumb} />
+                <img alt='' width='30' height='30' src={item.strDrinkThumb} />
               </li>
             ))}
           </ul>
