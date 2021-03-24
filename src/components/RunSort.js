@@ -1,5 +1,8 @@
 export function runSelectionSort(arr, ascend, property) {
+<<<<<<< HEAD
   //  console.log("Selection sort is running");
+=======
+>>>>>>> 629f37adc2389dfe74eb8e08442d9efbb93bacef
 
     if (arr.length <= 1) {
         return arr;
