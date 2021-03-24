@@ -53,7 +53,7 @@ class Request extends React.Component {
           </div>
           <ul>
             {items.map(item => (
-              <li key={item.name}>
+              <li key={item.idDrink}>
                 {item.strDrink}
                 <img alt='' width='30' height='30' src={item.strDrinkThumb} />
               </li>
