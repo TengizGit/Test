@@ -46,11 +46,9 @@ class Request extends React.Component {
       return <p>Loading...</p>
     } else {
       return (
-        <>
-          <div>
-            <h1>{firstTitle}</h1>
-            <h3>{firstParagraph}</h3>
-          </div>
+        <div className='Request'>
+          <h1>{firstTitle}</h1>
+          <h3>{firstParagraph}</h3>
           <ul>
             {items.map(item => (
               <li key={item.idDrink}>
@@ -59,7 +57,7 @@ class Request extends React.Component {
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )
     }
   }
