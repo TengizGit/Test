@@ -33,7 +33,7 @@ class Request extends React.Component {
   }
 
   render() {
-    const { error,isLoaded, items } = this.state;
+    const { error, isLoaded, items } = this.state;
     if (error) {
       return <p>Error {error.message}</p>
     } else if (!isLoaded) {
@@ -44,7 +44,7 @@ class Request extends React.Component {
           <h1>{firstTitle}</h1>
           <h2>{firstParagraph}</h2>
           <ul>
-            {items.map(({idDrink, strDrink, strDrinkThumb}) => (
+            {items.map(({ idDrink, strDrink, strDrinkThumb }) => (
               <li key={idDrink}>
                 {strDrink}
                 <img alt='' width='30' height='30' src={strDrinkThumb} />

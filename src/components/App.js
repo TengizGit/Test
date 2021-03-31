@@ -7,15 +7,15 @@ import Table from './Table';
 import Request from './Request';
 
 function App() {
-    return(
-      <div className="wrapper">
-        <Header/>
-        <Article/>
-        <Table/>
-        <Request />
-        <Footer/>
-      </div>
-    )
-  }
+  return (
+    <div className="wrapper">
+      <Header />
+      <Article />
+      <Table />
+      <Request />
+      <Footer />
+    </div>
+  )
+}
 
 export default App
