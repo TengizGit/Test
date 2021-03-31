@@ -9,15 +9,9 @@ class Request extends React.Component {
     super(props);
     this.state = {
       error: null,
-      isloaded: false,
       items: []
     };
   }
-  //state = {
-  //  error: null,
-  //  isLoaded: false,
-  //  items: []
-  //}
 
   componentDidMount() {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail")
@@ -39,7 +33,7 @@ class Request extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { error,isLoaded, items } = this.state;
     if (error) {
       return <p>Error {error.message}</p>
     } else if (!isLoaded) {
@@ -48,12 +42,12 @@ class Request extends React.Component {
       return (
         <div className='Request'>
           <h1>{firstTitle}</h1>
-          <h3>{firstParagraph}</h3>
+          <h2>{firstParagraph}</h2>
           <ul>
-            {items.map(item => (
-              <li key={item.idDrink}>
-                {item.strDrink}
-                <img alt='' width='30' height='30' src={item.strDrinkThumb} />
+            {items.map(({idDrink, strDrink, strDrinkThumb}) => (
+              <li key={idDrink}>
+                {strDrink}
+                <img alt='' width='30' height='30' src={strDrinkThumb} />
               </li>
             ))}
           </ul>
