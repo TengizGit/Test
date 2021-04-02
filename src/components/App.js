@@ -3,7 +3,7 @@ import '../styles/App.css';
 import Article from './Article';
 import Header from './Header';
 import Footer from './Footer';
-import Table from './Table';
+import Task5 from './Task5';
 import Request from './Request';
 
 function App() {
@@ -11,9 +11,10 @@ function App() {
     <div className="wrapper">
       <Header />
       <Article />
-      <Table />
+      <Task5 />
       <Request />
       <Footer />
+
     </div>
   )
 }

@@ -1,13 +1,14 @@
 import React from 'react';
 import '../styles/Article.css';
 
-const firstHeading = 'React internship';
+const firstTitle = 'React internship';
 
 function Article() {
   return (
     <div className="article">
-      <h1>{firstHeading}</h1>
+      <h1>{firstTitle}</h1>
     </div>
   )
 }
+
 export default Article

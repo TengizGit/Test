@@ -9,6 +9,7 @@ class Request extends React.Component {
     super(props);
     this.state = {
       error: null,
+      isloaded: false,
       items: []
     };
   }
@@ -40,18 +41,20 @@ class Request extends React.Component {
       return <p>Loading...</p>
     } else {
       return (
-        <div className='Request'>
-          <h1>{firstTitle}</h1>
-          <h2>{firstParagraph}</h2>
-          <ul>
-            {items.map(({ idDrink, strDrink, strDrinkThumb }) => (
-              <li key={idDrink}>
-                {strDrink}
-                <img alt='' width='30' height='30' src={strDrinkThumb} />
-              </li>
-            ))}
-          </ul>
-        </div>
+        <>
+          <div className="RequestItem">
+            <h1>{firstTitle}</h1>
+            <h3>{firstParagraph}</h3>
+            <ul>
+              {items.map(item => (
+                <li key={item.idDrink}>
+                  {item.strDrink}
+                  <img alt='' width='30' height='30' src={item.strDrinkThumb} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
       )
     }
   }
