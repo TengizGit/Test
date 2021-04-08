@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Task5 from './Task5';
 import Request from './Request';
+import RunEvents from './RunEvents';
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
       <Header />
       <Article />
       <Task5 />
+      <RunEvents />
       <Request />
       <Footer />
-
     </div>
   )
 }

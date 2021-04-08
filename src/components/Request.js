@@ -46,7 +46,7 @@ class Request extends React.Component {
             <h1>{firstTitle}</h1>
             <h3>{firstParagraph}</h3>
             <ul>
-              {items.map(({idDrink, strDrink, strDrinkThumb}) => (
+              {items.map(({ idDrink, strDrink, strDrinkThumb }) => (
                 <li key={idDrink}>
                   {strDrink}
                   <img alt='' width='30' height='30' src={strDrinkThumb} />

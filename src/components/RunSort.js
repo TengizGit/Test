@@ -1,6 +1,6 @@
 export function runSelectionSort(arr, ascend, property) {
-    
-const newArr = [...arr]
+
+    const newArr = [...arr]
     if (newArr.length <= 1) {
         return newArr;
     }
