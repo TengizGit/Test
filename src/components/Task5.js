@@ -13,7 +13,7 @@ import {
   leftButton,
   rightButton,
   listNumber
-}from '../components/constants';
+} from '../components/constants';
 
 const ArrTask5 = [
   { id: 1, year: 1967, name: 'Важное событие' },
@@ -38,7 +38,7 @@ const Task5 = () => {
       <td >{item.id}</td>
       <td>{item.year}</td>
       <td>{item.name}</td>
-      <td onDrag=''><button className="btn" onClick={() => DeleteById(item.id)}>
+      <td><button className="btn" onClick={() => DeleteById(item.id)}>
         {btnRightButton}</button></td>
     </tr>
   ));
@@ -52,8 +52,8 @@ const Task5 = () => {
 
   const handleYearClick = () => {
     const sortedArrTask5 = useSort
-      ? runSelectionSort(task5, upYear, "year") //функция runSelectionSort мутирует (с пом. файла RunSort) переданный ей аргумент и поэтому НЕ соответствует требованию урока 5.
-      : sortArrTask5(task5, upYear, "year"); //функция sortArrTask5 НЕ мутирует переданный ей аргумент и поэтому СООТВЕТСТВУЕТ требованию урока 5.
+      ? runSelectionSort(task5, upYear, "year")
+      : sortArrTask5(task5, upYear, "year");
 
     setTask5(sortedArrTask5);
     setUpYear(!upYear);

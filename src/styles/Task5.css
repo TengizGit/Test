@@ -10,10 +10,6 @@ table {
   border-collapse: collapse;
 }
 
-thead th {
-  border-bottom: 2px solid #ccc;
-}
-
 thead button {
   font-weight: 700;
   font-size: inherit;
@@ -28,11 +24,11 @@ button {
   margin: 10px;
 }
 
-tbody td {
-  border-bottom: 2px solid #ccc;
+tr {
+  border: 2px solid #000;
 }
 
-tbody tr:hover {
+tr:hover {
   background-color: #eee;
   color: coral;
 }
@@ -48,8 +44,3 @@ tbody tr:hover {
 .Table h2 {
   margin: 15px;
 }
-
-.Table {
-  border-bottom: 2px solid #ccc;
-}
-
