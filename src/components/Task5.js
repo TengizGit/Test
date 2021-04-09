@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { runSelectionSort } from '../components/RunSort';
+import DragNDrop from '../components/DragNDrop';
 import '../styles/Task5.css';
 import {
   secondTitle,
@@ -9,7 +10,6 @@ import {
   tableSecondHeading,
   yearButton,
   eventButton,
-  btnRightButton,
   leftButton,
   rightButton,
   listNumber
@@ -33,13 +33,11 @@ const Task5 = () => {
   const [yearInput, setYearInput] = useState("");
   const [nameInput, setNameInput] = useState("");
 
-  const ListItem = task5.map((item, index) => (
+  const ListItem = task5.map((item) => (
     <tr key={item.id}>
-      <td >{item.id}</td>
+      <td>{item.id}</td>
       <td>{item.year}</td>
       <td>{item.name}</td>
-      <td><button className="btn" onClick={() => DeleteById(item.id)}>
-        {btnRightButton}</button></td>
     </tr>
   ));
 
@@ -85,10 +83,15 @@ const Task5 = () => {
     setTask5(task5.slice(0, -1));
   };
 
-  const DeleteById = (idYear) => {
-    setTask5(task5.filter((item) => item.id !== idYear));
-    setTask5(task5.slice(0, -1));
-  }
+  const [data, setData] = useState();
+  useEffect(() => {
+    if (localStorage.getItem('List')) {
+      console.log(localStorage.getItem('List'))
+      setData(JSON.parse(localStorage.getItem('List')))
+    } else {
+      setData(ArrTask5)
+    }
+  }, [setData])
 
   return (
     <>
@@ -112,7 +115,6 @@ const Task5 = () => {
                 {eventButton}
                 {sortCriteria !== upName ? " " : " "}
               </button></th>
-              {<th ></th>}
             </tr>
           </thead>
           <tbody>
@@ -126,8 +128,13 @@ const Task5 = () => {
             {rightButton}</button>
         </div>
       </div>
+      <div className="App">
+        <header className="App-header">
+          <DragNDrop data={data} />
+        </header>
+      </div>
     </>
   );
 }
 
-export default Task5;
+export default Task5
