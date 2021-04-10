@@ -46,6 +46,9 @@ tr:hover {
 }
 
 .App {
+  background-color: #eee;
+  border: 3px solid #ccc;
+
   text-align: center;
   margin: 10px 110px;
 }

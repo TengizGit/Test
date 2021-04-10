@@ -12,8 +12,13 @@ import {
   eventButton,
   leftButton,
   rightButton,
-  listNumber
+  listNumber,
+  dragNDroph2,
+  dragNDropTextP,
+  dragNDropNameh2
 } from '../components/constants';
+
+
 
 const ArrTask5 = [
   { id: 1, year: 1967, name: 'Важное событие' },
@@ -128,11 +133,16 @@ const Task5 = () => {
             {rightButton}</button>
         </div>
       </div>
+
       <div className="App">
+        <h2>{dragNDroph2}</h2>
+        <p>{dragNDropTextP}</p>
+        <h2>{dragNDropNameh2}</h2>
         <header className="App-header">
           <DragNDrop data={data} />
         </header>
       </div>
+
     </>
   );
 }

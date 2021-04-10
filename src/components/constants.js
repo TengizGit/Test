@@ -9,3 +9,6 @@ export const btnRightButton = 'Удалить';
 export const leftButton = 'Добавить';
 export const rightButton = 'Удалить';
 export const listNumber = '№';
+export const dragNDroph2 = '7 урок';
+export const dragNDropTextP = 'сделать набор горячих клавиш для подсвечивания активного элемента списка из апи или урока 5. По клику делать элемент активным(подсвечивать бордером или менять цвет шрифта) или неактивным. Сделать перетаскивание элементов списка мышью чтобы можно было менять порядок вручную. Вывести на странице картинку с алертом который сработает на событие load и error.';
+export const dragNDropNameh2 = 'Drag and Drop';
