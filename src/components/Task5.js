@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { runSelectionSort } from '../components/RunSort';
-import DragNDrop from '../components/DragNDrop';
-import '../styles/Task5.css';
+import DragNDrop from './DragNDrop';
 import {
   secondTitle,
   thirdParagraph,
@@ -17,13 +16,14 @@ import {
   dragNDropTextP,
   dragNDropNameh2
 } from '../components/constants';
+import '../styles/Task5.css';
 
 
 
 const ArrTask5 = [
-  { id: 1, year: 1967, name: 'Важное событие' },
-  { id: 2, year: 1973, name: 'Важное событие' },
-  { id: 3, year: 1980, name: 'Важное событие' },
+  { id: 1, year: 1967, name: 'Важное событие 1' },
+  { id: 2, year: 1973, name: 'Важное событие 2' },
+  { id: 3, year: 1980, name: 'Важное событие 3' },
   { id: 4, year: 1998, name: 'Самое важное событие' },
   { id: 5, year: 2019, name: 'Очередное важное событие' },
 ];
@@ -86,17 +86,8 @@ const Task5 = () => {
 
   const handleLastNameRemove = () => {
     setTask5(task5.slice(0, -1));
-  };
+  }; 
 
-  const [data, setData] = useState();
-  useEffect(() => {
-    if (localStorage.getItem('List')) {
-      console.log(localStorage.getItem('List'))
-      setData(JSON.parse(localStorage.getItem('List')))
-    } else {
-      setData(ArrTask5)
-    }
-  }, [setData])
 
   return (
     <>
@@ -139,7 +130,7 @@ const Task5 = () => {
         <p>{dragNDropTextP}</p>
         <h2>{dragNDropNameh2}</h2>
         <header className="App-header">
-          <DragNDrop data={data} />
+          <DragNDrop data={ArrTask5} />
         </header>
       </div>
 
