@@ -1,8 +1,6 @@
-image: node:14
-
 ports:
   - port: 3000
-    onOpen: open-browser
+    onOpen: open-preview
 tasks:
   - init: yarn
     command: yarn start
