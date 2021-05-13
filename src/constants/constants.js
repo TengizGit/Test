@@ -1,0 +1,15 @@
+export const secondTitle = '5 урок';
+export const thirdParagraph = 'Задание: переписать функции чтобы все необходимое приходило в качестве параметров';
+export const tableHeading = 'Биография';
+export const tableText = 'Здесь может быть все что угодно, но есть только то что есть, увы.';
+export const tableSecondHeading = 'Биография в таблице';
+export const yearButton = 'Год';
+export const eventButton = 'Событие';
+export const btnRightButton = 'Удалить';
+export const leftButton = 'Добавить';
+export const rightButton = 'Удалить';
+export const listNumber = '№';
+export const dragNDroph2 = '7 урок';
+export const dragNDropTextP = 'Сделать перетаскивание элементов списка мышью чтобы можно было менять порядок вручную.';
+export const dragNDropNameh2 = 'Drag and Drop';
+export const heading = 'React';

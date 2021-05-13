@@ -1,0 +1,61 @@
+.Item {
+  text-align: center;
+  background-color: #eee;
+  border: 3px solid #ccc;
+  margin: 10px 110px;
+}
+
+table {
+  border: 2px solid #000;
+  width: 100%;
+}
+
+thead button {
+  font-weight: 700;
+  font-size: inherit;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  font-weight: 400;
+  font-size: inherit;
+  padding: 8px;
+  margin: 10px;
+}
+
+td,
+th {
+  padding: 10px 0;
+}
+
+tr:hover {
+  background-color: #eee;
+  color: coral;
+}
+
+.Table h3 {
+  margin: 15px;
+}
+
+.Table p {
+  margin: 10px;
+}
+
+.Table h2 {
+  margin: 15px;
+}
+
+.App {
+  background-color: #eee;
+  border: 3px solid #ccc;
+  text-align: center;
+  margin: 10px 110px;
+}
+
+.dragebble td {
+  cursor: grabbing;
+  padding: 20px;
+  margin: 10px;
+  font-size: 18px;
+}

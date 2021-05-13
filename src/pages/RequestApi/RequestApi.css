@@ -1,0 +1,33 @@
+.RequestItem{
+  text-align: center;
+  background-color: #eee;
+  border: 3px solid #ccc;
+  margin: 10px 110px;
+}
+
+li {
+  list-style: none;
+}
+
+h1, p {
+  margin: 10px;
+}
+
+h3 {
+  margin: 10px;
+}
+
+.RequestItem img {
+  margin: 0px 10px;
+}
+
+.preloaderImg {
+  top: -30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.preloaderImg img {
+  display: inline-block;
+  margin: 0 auto;
+}

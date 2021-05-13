@@ -1,0 +1,21 @@
+.article {
+    background: #d6faf5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.article h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 0;
+    color: #09090a;
+    text-shadow: 3px 3px 1px #7c7990;
+}
+
+.article h2 {
+    margin: 15px;
+}
+
+.article p {
+    font-size: 16px;
+    margin: 10px;
+}
