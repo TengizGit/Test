@@ -13,3 +13,4 @@ export const dragNDroph2 = '7 урок';
 export const dragNDropTextP = 'Сделать перетаскивание элементов списка мышью чтобы можно было менять порядок вручную.';
 export const dragNDropNameh2 = 'Drag and Drop';
 export const heading = 'React';
+export const firstTitle = 'React internship';
