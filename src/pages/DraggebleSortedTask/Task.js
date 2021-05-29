@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { runSelectionSort } from './RunSort';
+import { runSelectionSort } from '../../helper/RunSort';
 import DragNDrop from './DragNDropTask';
 import {
   btnRightButton,
@@ -36,7 +36,7 @@ const Task5 = () => {
   const [yearInput, setYearInput] = useState('');
   const [nameInput, setNameInput] = useState('');
 
-  const DeleteById = (idYear) => {
+  const deleteById = (idYear) => {
     setTask5(task5.filter((item) => item.id !== idYear));
     setTask5(task5.slice(0, -1));
   };
@@ -46,7 +46,7 @@ const Task5 = () => {
       <td>{item.id}</td>
       <td>{item.year}</td>
       <td>{item.name}</td>
-      <td><button type="button" className="btn" onClick={() => DeleteById(item.id)}>{btnRightButton}</button></td>
+      <td><button type="button" className="btn" onClick={() => deleteById(item.id)}>{btnRightButton}</button></td>
     </tr>
   ));
 

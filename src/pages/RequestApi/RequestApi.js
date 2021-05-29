@@ -34,32 +34,31 @@ class Request extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const {error, isLoaded, items} = this.state;
     if (error) {
       return (
         <p className={preloaderImg}>
           {error.message}
-          <img src={preloaderImg} alt="Loading..." />
+          <img src={preloaderImg} alt="Loading..."/>
         </p>
       );
-    } if (!isLoaded) {
-      return <p className={preloaderImg}><img src={preloaderImg} alt="Loading..." /></p>;
+    }
+    if (!isLoaded) {
+      return <p className={preloaderImg}><img src={preloaderImg} alt="Loading..."/></p>;
     }
     return (
-      <>
-        <div className="RequestItem">
-          <h1>{firstTitle}</h1>
-          <h3>{firstParagraph}</h3>
-          <ul>
-            {items.map(({ idDrink, strDrink, strDrinkThumb }) => (
-              <li key={idDrink}>
-                {strDrink}
-                <img alt="" width="30" height="30" src={strDrinkThumb} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </>
+      <div className="RequestItem">
+        <h1>{firstTitle}</h1>
+        <h3>{firstParagraph}</h3>
+        <ul>
+          {items.map(({idDrink, strDrink, strDrinkThumb}) => (
+            <li key={idDrink}>
+              {strDrink}
+              <img alt="" width="30" height="30" src={strDrinkThumb}/>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 }

@@ -1,9 +1,9 @@
-import React, { useState, useRef } from 'react';
-// eslint-disable-next-line react/prop-types
+import React, { useState } from 'react';
+
 function DragNDrop({ data }) {
   const [list, setList] = useState(data);
-  const draggingItem = useRef();
-  const dragOverItem = useRef();
+  const draggingItem = useState();
+  const dragOverItem = useState();
 
   const handleDragStart = (e, position) => {
     draggingItem.current = position;
@@ -29,7 +29,7 @@ function DragNDrop({ data }) {
   return (
     <div>
       <table className="drag-N-drop">
-        <thead className="dragebble">
+        <thead className="draggable">
           {list.map((item, i) => (
             <tr
               key={item.name}
@@ -39,9 +39,9 @@ function DragNDrop({ data }) {
               onDragOver={(e) => e.preventDefault()}
               draggable
             >
-              <td key={item.id}>{item.id}</td>
-              <td key={item.year}>{item.year}</td>
-              <td key={item.name}>{item.name}</td>
+              <td>{item.id}</td>
+              <td>{item.year}</td>
+              <td>{item.name}</td>
             </tr>
           ))}
         </thead>

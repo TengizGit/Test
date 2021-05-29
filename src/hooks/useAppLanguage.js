@@ -5,7 +5,10 @@ import { EN } from '../constants/languages';
 const useAppLanguage = () => {
     const [language, setLanguage] = useState(EN);
 
-    const appLanguage = localStorage.getItem('entry-task-app-language') || EN;
+    i18n.getItem = function (entryTaskAppLanguage) {
+        return "";
+    }
+    const appLanguage = i18n.getItem('entry-task-app-language') || EN;
     if (appLanguage !== language) setLanguage(appLanguage);
 
     const changeLanguage = (lng) => {
